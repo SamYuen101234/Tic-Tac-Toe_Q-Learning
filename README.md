@@ -1,6 +1,6 @@
 # MSBD 5012 HA5 Tic-Tac-Toe Q-Learning (2021 Fall)
 
-#### Name: Yuen Zhikun Stuendt ID: 20505288 ITSC: zyuen
+### Name: Yuen Zhikun Stuendt ID: 20505288 ITSC: zyuen
 
 ***Command to train the agents in 500,000 episodes and test it with 100,000 episodes after training***
 ```
