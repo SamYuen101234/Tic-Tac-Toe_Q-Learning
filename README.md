@@ -94,6 +94,8 @@ After training N episodes, we will test the best agent (agent 1, update policy 2
 | 100,000   	| Agent 1 won 78993 <br> Agent 2 won 4891 <br> Num draw: 16116        |Agent 1 won 94580 <br> Agent 2 won 0 <br> Num draw: 5420      |Agent 1 won 92236 <br> Agent 2 won 0 <br> Num draw: 7764       |Agent 1 won 93709 <br> Agent 2 won 0 <br> Num draw: 6291       |
 | 250,000   	| Agent 1 won 94397 <br> Agent 2 won 0 <br> Num draw: 5603        |Agent 1 won 94372 <br> Agent 2 won 0 <br> Num draw: 5628       |-       |-       |
 | 500,000   | Agent 1 won 95190 <br> Agent 2 won 0 <br> Num draw: 4810        |Agent 1 won 94994 <br> Agent 2 won 0 <br> Num draw: 5006       |-       |- |
+
+
 Esplison Decay with esplion=1 initially and esplion*=(1-decay_rate) in each action. The decay rate is 1e-5. The agent with esplion decay will be tested until 100,000 episodes. As the esplion < 0.1 after 100,000, the agent become always follow the Q-table and no new exploration.
 
 In here, we consider the best model is unbeatable by the random-action agent with the least training episodes. **According to the result from the above table, we can conclude that the agent with encouraging exploration becomes almost unbeatable with 10,000 learning episodes only and totally unbeatable after 50,000 learning episodes.** The idea of esplion decay is good but it is hard to tune the initial esplion and the decay rate, it  is even worse than the baseline with 10,000 learning episodes only. However, it still uses less learning episodes (100,000) to become totally unbeatable than the baseline. 
